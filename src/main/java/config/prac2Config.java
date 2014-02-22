@@ -6,26 +6,22 @@
 
 package config;
 
-import Service.Steps;
-import Service.implementation.StepsImp;
+import Service.implementation.prac2Impl;
+import Service.prac2;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-
 
 /**
  *
  * @author student
  */
-
-@Configuration
-public class StepsConfig {
-    @Bean(name= "stepsBean")
-    
-    public Steps stepsConfig()
+@Configuration 
+public class prac2Config 
+{
+    @Bean(name = "notAgame")
+    public prac2 getService()
     {
-        return new StepsImp();
+        return (prac2) new prac2Impl();
     }
     
 }
-

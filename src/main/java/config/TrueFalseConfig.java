@@ -6,26 +6,21 @@
 
 package config;
 
-import Service.Steps;
-import Service.implementation.StepsImp;
+import Service.implementation.truefalseImpl;
+import Service.trueFalse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-
 
 /**
  *
  * @author student
  */
-
 @Configuration
-public class StepsConfig {
-    @Bean(name= "stepsBean")
-    
-    public Steps stepsConfig()
+public class TrueFalseConfig {
+    @Bean(name="whatIsIt")
+    public trueFalse callServ()
     {
-        return new StepsImp();
+        return (trueFalse) new truefalseImpl();
     }
     
 }
-

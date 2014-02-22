@@ -6,26 +6,22 @@
 
 package config;
 
-import Service.Steps;
-import Service.implementation.StepsImp;
+import Service.Compare;
+import Service.implementation.CompareImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-
 
 /**
  *
  * @author student
  */
-
 @Configuration
-public class StepsConfig {
-    @Bean(name= "stepsBean")
-    
-    public Steps stepsConfig()
+public class CompareConfig 
+{
+    @Bean (name ="ItsTheSame")
+    public Compare callImpl()
     {
-        return new StepsImp();
+        return (Compare) new CompareImpl();
     }
     
 }
-
